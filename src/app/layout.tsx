@@ -7,15 +7,13 @@ export const metadata: Metadata = {
 };
 
 type RootLayoutProps = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
+    <html lang="en" className="dark min-h-screen">
+      <body>{children}</body>
     </html>
   );
 }

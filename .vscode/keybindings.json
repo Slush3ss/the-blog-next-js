@@ -1,0 +1,7 @@
+[
+  {
+    "key": "shift+alt+k",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Prettier: Format current file"
+  }
+]
