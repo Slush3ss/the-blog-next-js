@@ -1,15 +1,18 @@
 import { BelowPosts } from "@/components/BelowPosts";
 import { Container } from "@/components/Container";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 import { HeaderPost } from "@/components/HeaderPost";
+import { SpinLoader } from "@/components/SpinLoader";
+import { Suspense } from "react";
 
 export default async function HomePage() {
   return (
-    <Container>
-      <header>
-        <h1 className="text-4xl md:text-6xl font-bold py-8">The Blog</h1>
-      </header>
+    <>
       <HeaderPost />
-      <BelowPosts />
-    </Container>
+      <Suspense fallback={<SpinLoader size={40} />}>
+        <BelowPosts />
+      </Suspense>
+    </>
   );
 }
