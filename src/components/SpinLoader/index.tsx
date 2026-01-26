@@ -14,7 +14,9 @@ export function SpinLoader({ size }: SpinLoaderProps) {
         "items-center",
         "justify-center",
         "flex-col",
-        "gap-4.5"
+        "gap-4.5",
+        "p-12",
+        "mb-16"
       )}
     >
       <div
