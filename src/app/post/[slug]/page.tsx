@@ -16,12 +16,15 @@ export async function generateMetadata({
 
   return {
     title: post.title,
-    description: post.excerpt
+    description: post.excerpt,
   };
 }
 
 export default async function PostSlugPage({ params }: PostSlugPageProps) {
   const { slug } = await params;
-
-  return (<Suspense fallback={<SpinLoader size={40} />}><SinglePostPage slug={slug} /></Suspense>);
+  return (
+    <Suspense fallback={<SpinLoader size={40} />}>
+      <SinglePostPage slug={slug} />
+    </Suspense>
+  );
 }

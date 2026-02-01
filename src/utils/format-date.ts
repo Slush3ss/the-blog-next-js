@@ -10,3 +10,7 @@ export function FormatDistanceToNow(rawDate: string): string {
   const date = new Date(rawDate)
   return formatDistanceAgo(date, { locale: ptBR, addSuffix: true })
 }
+
+export function FormatHour(rawDate: number) {
+  return format(rawDate, "HH:mm:ss", { locale: ptBR })
+}

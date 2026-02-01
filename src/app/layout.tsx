@@ -3,6 +3,7 @@ import "./globals.css";
 import { Container } from "@/components/Container";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: {
@@ -21,7 +22,9 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
     <html lang="en" className="dark min-h-screen">
       <body>
         <Container>
-          <Header />
+          <Link href="/">
+            <Header />
+          </Link>
           {children}
           <Footer />
         </Container>
