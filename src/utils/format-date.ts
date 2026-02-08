@@ -1,5 +1,6 @@
 import { format, formatDistanceToNow as formatDistanceAgo } from "date-fns";
 import { ptBR } from "date-fns/locale";
+import { cacheLife, cacheTag } from "next/cache";
 
 export function FormatDate(rawDate: string): string {
   const date = new Date(rawDate)

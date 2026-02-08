@@ -29,13 +29,13 @@ export class DrizzlePostRepository implements PostRepository {
     return post;
   }
 
-  async findBySlug(slug: string): Promise<PostModel> {
+  async findBySlug(slug: string): Promise<PostModel | string> {
     const [post] = await drizzleDb
       .select()
       .from(postsTable)
       .where(and(eq(postsTable.slug, slug), eq(postsTable.published, true)));
 
-    if (!post) throw new Error("Post não encontrado");
+    if (!post) return "Post não encontrado";
 
     return post;
   }

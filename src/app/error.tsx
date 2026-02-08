@@ -16,7 +16,7 @@ export default function RootErrorPage({ error }: RootErrorPageProps) {
     <ErrorMessage
       pageTitle="Internal Server Error"
       contentTitle="501"
-      content="Ocorreu um erro. Tene novamente mais tarde"
+      content="Ocorreu um erro. Tente novamente mais tarde"
     />
   );
 }
