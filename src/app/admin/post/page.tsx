@@ -1,5 +1,11 @@
-export const dynamic = "force-dynamic";
+import { PostListAdminPage } from "@/components/PostListAdmin";
+import { SpinLoader } from "@/components/SpinLoader";
+import { Suspense } from "react";
 
 export default async function AdminPostPage() {
-  return (<div>teste</div>)
+  return (
+    <Suspense fallback={<SpinLoader size={55} />}>
+      <PostListAdminPage />
+    </Suspense>
+  );
 }

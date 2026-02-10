@@ -1,5 +1,6 @@
-import { findBySlugPost } from "@/lib/post/queries";
+import { findBySlugPost } from "@/lib/post/queries/public";
 import { FormatDate } from "@/utils/format-date";
+import { cacheLife } from "next/cache";
 import Image from "next/image";
 import { SafeMarkdown } from "../SafeMarkdown";
 
@@ -8,6 +9,8 @@ type SinglePostPageProps = {
 };
 
 export async function SinglePostPage({ slug }: SinglePostPageProps) {
+  "use cache";
+  cacheLife("minutes");
   const post = await findBySlugPost(slug);
 
   return (

@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { PostSummary } from "../PostSummary";
-import { findAllPublicPosts } from "@/lib/post/queries"
+import { findAllPublicPosts } from "@/lib/post/queries/public"
 
 export async function BelowPosts() {
   const posts = await findAllPublicPosts()

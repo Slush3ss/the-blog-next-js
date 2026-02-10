@@ -3,8 +3,6 @@ import { HeaderPost } from "@/components/HeaderPost";
 import { SpinLoader } from "@/components/SpinLoader";
 import { Suspense } from "react";
 
-export const dynamic = "force-static";
-
 export default function HomePage() {
   return (
     <>

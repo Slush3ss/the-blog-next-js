@@ -1,8 +1,7 @@
-import { PostRepo } from "@/repositories/post";
 import Image from "next/image";
 import Link from "next/link";
 import { PostSummary } from "../PostSummary";
-import { findAllPublicPosts } from "@/lib/post/queries"
+import { findAllPublicPosts } from "@/lib/post/queries/public"
 
 export async function HeaderPost() {
   const posts = await findAllPublicPosts()

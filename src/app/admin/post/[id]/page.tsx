@@ -1,4 +1,5 @@
-export const dynamic = "force-dynamic";
+import { AdminPostId } from "@/components/AdminPostId";
+import { Suspense } from "react";
 
 type AdminPostIdPageProps = {
   params: Promise<{ id: string }>;
@@ -7,7 +8,9 @@ type AdminPostIdPageProps = {
 export default async function AdminPostIdPage({
   params,
 }: AdminPostIdPageProps) {
-
-  const { id } = await params
-  return <div>teste {id}</div>;
+  return (
+    <Suspense>
+      <AdminPostId params={params} />
+    </Suspense>
+  );
 }
